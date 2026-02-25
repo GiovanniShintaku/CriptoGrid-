@@ -1,10 +1,15 @@
 # Arquitetura da Solução
 
-<span style="color:red">Pré-requisitos: <a href="3-Projeto de Interface.md"> Projeto de Interface</a></span>
+## Visão Geral
+Optamos pela **Arquitetura de Microserviços** utilizando **API REST**.  
+Essa modelagem traz os seguintes benefícios:  
+- Escalabilidade independente dos serviços  
+- Modularidade  
+- Manutenção simplificada  
+- Resiliência a falhas em serviços isolados  
 
-Definição de como o software é estruturado em termos dos componentes que fazem parte da solução e do ambiente de hospedagem da aplicação.
+![Diagrama da Arquitetura Distribuída Microserviços](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2025-2-e4-infra-t1-pmv-ads-2025-2-e4-infra-t1/blob/main/docs/img/diagrama_arquitetura.png)
 
-![Arquitetura da Solução](img/api_web_mobile.png)
 
 ## Diagrama de Classes
 
@@ -20,119 +25,92 @@ As referências abaixo irão auxiliá-lo na geração do artefato “Diagrama de
 Este documento descreve a estrutura e o esquema do banco de dados não relacional utilizado por nosso projeto, baseado em MongoDB. O MongoDB é um banco de dados NoSQL que armazena dados em documentos JSON (ou BSON, internamente), permitindo uma estrutura flexível e escalável para armazenar e consultar dados.
 
 ## Esquema do Banco de Dados
-### Coleção: users
-Armazena as informações dos usuários do sistema.
+### Coleção: UserAuthData
+Schema para um documento na coleção de autenticação de usuários, contém apenas dados de perfil e login.
 
 Estrutura do Documento
 
 ```Json
 {
-    "_id": "ObjectId('5f7e1bbf9b2a4f1a9c38b9a1')",
-    "name": "John Doe",
-    "email": "john.doe@example.com",
-    "passwordHash": "hash_da_senha",
-    "roles": ["admin", "user"],
-    "createdAt": "2024-08-29T10:00:00Z",
-    "updatedAt": "2024-08-29T12:00:00Z"
+    "_id": "ObjectId('68d5ba0550c6580418dec798')",
+    "Id": 1, 
+    "Email": "emailteste@gmail.com",
+    "Password": "12345678Aa",
+    "Name": "bot1",
+    "createdAt": "2025-09-25T10:00:00Z",
 }
 ```
 
 #### Descrição dos Campos
 > - <strong>_id:</strong> Identificador único do usuário gerado automaticamente pelo MongoDB.
-> - <strong>name:</strong> Nome completo do usuário.
+> - <strong>Id:</strong> Identificador único do usuário.
 > - <strong>email:</strong> Endereço de email do usuário.
-> - <strong>passwordHash:</strong> Hash da senha do usuário.
-> - <strong>roles:</strong> Lista de papéis atribuídos ao usuário (por exemplo, admin, user).
+> - <strong>Password:</strong> Senha do usuário.
+> - <strong>name:</strong> Nome completo do usuário.
 > - <strong>createdAt:</strong> Data e hora de criação do usuário.
-> - <strong>updatedAt:</strong> Data e hora da última atualização dos dados do usuário.
 
-### Coleção: products
-Armazena as informações dos produtos disponíveis no sistema.
+### Coleção: CoinData
+Schema para um documento na coleção de criptomoedas.
 
 ```Json
 {
-    "_id": "ObjectId('5f7e1ccf9b2a4f1a9c38b9a2')",
-    "name": "Produto Exemplo",
-    "description": "Descrição detalhada do produto.",
-    "price": 99.99,
-    "category": "Categoria Exemplo",
-    "stock": 100,
-    "createdAt": "2024-08-29T10:30:00Z",
-    "updatedAt": "2024-08-29T11:30:00Z"
+    "_id": "ObjectId('68d5c11550c6580418dec79a')",
+    "Id": "1",
+    "Symbol": "btc",
+    "Name": "Bitcoin",
+    "Image": "https://pt.wikipedia.org/wiki/Bitcoin#/media/Ficheiro:Bitcoin.svg",
+    "Description": "Moeda virtual para loucos",
+    "CategoriesID": 1,
+    "AssetplatformId": "Exemplo",
+    "MArketData": [{
+         "CurrentPrice": 900,
+         "MarketCap": 1000,
+         "MarketCapRank": 1,
+         "High24h": 990,
+         "Low24h": 890,
+         "PriceChangePercentage24h": 10,
+         "PriceChangePercentage7dInCurrency": 5,
+         "TotalVolume": 5000,
+         "Lastupdated": "2025-09-26T17:00:00Z"
+
+   }]
+   
 }
 ```
 
 #### Descrição dos Campos
-> - <strong>_id:</strong> Identificador único do usuário gerado automaticamente pelo MongoDB.
-> - <strong>name:</strong> Nome completo do usuário.
-> - <strong>email:</strong> Endereço de email do usuário.
-> - <strong>passwordHash:</strong> Hash da senha do usuário.
-> - <strong>roles:</strong> Lista de papéis atribuídos ao usuário (por exemplo, admin, user).
-> - <strong>createdAt:</strong> Data e hora de criação do usuário.
-> - <strong>updatedAt:</strong> Data e hora da última atualização dos dados do usuário.
+> - <strong>_id:</strong> Identificador único do objeto gerado automaticamente pelo MongoDB.
+> - <strong>Id:</strong> Identificador único da moeda.
+> - <strong>Symbol:</strong> Código reconhecido internacionalmente de cada moeda.
+> - <strong>Name:</strong> Nome de cada moeda
+> - <strong>Image:</strong> URL contendo o endereço da logo da moeda.
+> - <strong>Description:</strong> Descrição da moeda.
+> - <strong>CategoriesId:</strong> Identificador de categoria da qual a moeda pertence.
+> - <strong>AssetPlatformId:</strong> .
+> - <strong>MarketData:</strong> Objeto que contém a maior parte das informações sobre a moeda.
 
-### Coleção: products
-Armazena as informações dos produtos disponíveis no sistema.
+### Coleção: UserCoinData
+Schema para a coleção de ligação, cada documento conect um usuário (via UserId) e uma moeda (via CoinId).
 
 Estrutura do Documento
 
 ```Json
 {
     "_id": "ObjectId('5f7e1ccf9b2a4f1a9c38b9a2')",
-    "name": "Produto Exemplo",
-    "description": "Descrição detalhada do produto.",
-    "price": 99.99,
-    "category": "Categoria Exemplo",
-    "stock": 100,
-    "createdAt": "2024-08-29T10:30:00Z",
-    "updatedAt": "2024-08-29T11:30:00Z"
+    "Id": "1",
+    "UserId": "1",
+    "CoinId": "1",
+    "AddedAt": 2025-08-20T15:00:00.000+00:00,
 }
 ```
 
 #### Descrição dos Campos
 > - <strong>_id:</strong> Identificador único do produto gerado automaticamente pelo MongoDB.
-> - <strong>name:</strong> Nome do produto.
-> - <strong>description:</strong> Descrição detalhada do produto.
-> - <strong>price:</strong> Preço do produto.
-> - <strong>category:</strong> Categoria à qual o produto pertence.
-> - <strong>stock:</strong> Quantidade de produtos em estoque.
-> - <strong>createdAt:</strong> Data e hora de criação do produto.
-> - <strong>updatedAt:</strong> Data e hora da última atualização dos dados do produto.
+> - <strong>Id:</strong> Identificador do documento.
+> - <strong>UserId:</strong> Identificador do usuário.
+> - <strong>coinId:</strong> Identificador da moeda.
+> - <strong>AddedAt:</strong> Data e hora de criação do documento.
 
-### Coleção: orders
-Armazena as informações dos pedidos feitos pelos usuários.
-
-Estrutura do Documento
-
-```Json
-{
-    "_id": "ObjectId('5f7e1ddf9b2a4f1a9c38b9a3')",
-    "userId": "ObjectId('5f7e1bbf9b2a4f1a9c38b9a1')",
-    "products": [
-        {
-            "productId": "ObjectId('5f7e1ccf9b2a4f1a9c38b9a2')",
-            "quantity": 2,
-            "price": 99.99
-        }
-    ],
-    "totalPrice": 199.98,
-    "status": "pending",
-    "createdAt": "2024-08-29T11:00:00Z",
-    "updatedAt": "2024-08-29T11:30:00Z"
-}
-```
-
-#### Descrição dos Campos
-> - <strong>_id:</strong> Identificador único do pedido gerado automaticamente pelo MongoDB.
-> - <strong>userId:</strong> Referência ao identificador do usuário que fez o pedido.
-> - <strong>products:</strong> Lista de produtos incluídos no pedido, cada um com:
-> - <strong>productId:</strong> Identificador do produto.
-> - <strong>quantity:</strong> Quantidade do produto pedido.
-> - <strong>price:</strong> Preço unitário do produto no momento do pedido.
-> - <strong>totalPrice:</strong> Preço total do pedido (soma de todos os itens).
-> - <strong>status:</strong> Status atual do pedido (por exemplo, pending, shipped, delivered).
-> - <strong>createdAt:</strong> Data e hora de criação do pedido.
-> - <strong>updatedAt:</strong> Data e hora da última atualização dos dados do pedido.
 
 ### Boas Práticas
 
@@ -169,9 +147,44 @@ Entregar um arquivo banco.sql contendo os scripts de criação das tabelas do ba
 
 ## Tecnologias Utilizadas
 
-Descreva aqui qual(is) tecnologias você vai usar para resolver o seu problema, ou seja, implementar a sua solução. Liste todas as tecnologias envolvidas, linguagens a serem utilizadas, serviços web, frameworks, bibliotecas, IDEs de desenvolvimento, e ferramentas.
+Para implementação da solução, uma arquitetura de microsserviços foi adotada, utilizando ferramentas já conhecidas no mercado. As tecnologias cobrem desde o desenvolvimento das interfaces de usuário (front-end) e a lógica de negócio (back-end/APIS) até o gerenciamento dos dados.
 
-Apresente também uma figura explicando como as tecnologias estão relacionadas ou como uma interação do usuário com o sistema vai ser conduzida, por onde ela passa até retornar uma resposta ao usuário.
+### Linguagens e frameworks de desenvolvimento
+
+<img width="727" height="332" alt="image" src="https://github.com/user-attachments/assets/24500626-e20d-484c-b471-3585e11de49e" />
+
+### Banco de dados
+
+<img width="840" height="114" alt="image" src="https://github.com/user-attachments/assets/a4d631db-bc07-470b-9aee-eb24a583c4a5" />
+
+### Ferramentas e outras tecnologias
+
+<img width="836" height="116" alt="image" src="https://github.com/user-attachments/assets/314c1f46-2588-4f36-9220-1c90c313df79" />
+
+## Relação entre as Tecnologias e Fluxo de Interação
+
+A figura localizada no início da parte 5 da documentação, no campo "Visão Geral", ilustra a arquitetura geral do sistema e o fluxo de interação, demonstrando como as tecnologias estão interligadas para servir ao usuário.
+
+### Explicação do Fluxo de Interação
+O sistema é construído em torno de uma API central que atua como o ponto de entrada para todas as interações do usuário, sejam elas originadas de um dispositivo Mobile ou do Frontend Web (ambos desenvolvidos com React e Chart.js).
+
+1. Interação do Usuário: O usuário inicia a interação a partir do aplicativo Mobile ou da página Web.
+
+2. Chamada à API (REST API Calls): A aplicação front-end envia requisições formatadas no padrão REST para o ponto central da API.
+
+3. Encaminhamento para Microsserviços (C#): A API direciona a requisição para o microsserviço C# apropriado:
+
+    a. Serviço de Login: Para autenticar o usuário, interagindo com a coleção user_auth_data (MongoDB).
+
+    b. Serviço de Dados da Área Logada: Para funcionalidades exclusivas de usuários autenticados (Ex: dados de portfólio), interagindo com a coleção users_coins_data (MongoDB).
+
+    c. Serviço de Dados Públicos: Para informações que não requerem login, como dados gerais de moedas, consultando as coleções coin_data e users_coins_data (MongoDB).
+
+4. Ingestão de Dados (Fluxo Back-end): Separadamente, o Serviço de Ingestão de Dados (C#) é responsável por consumir de forma contínua ou agendada uma API Pública Externa. Ele processa esses dados e os armazena na coleção coin_data (MongoDB), garantindo que os dados servidos aos usuários estejam sempre atualizados.
+
+5. Retorno: O microsserviço C# processa a lógica de negócio, interage com o MongoDB conforme necessário, e devolve a resposta através da API de volta para a aplicação front-end (Mobile ou Web), que utiliza o React para atualizar a interface e o Chart.js para exibir gráficos.
+
+
 
 ## Hospedagem
 

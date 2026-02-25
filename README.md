@@ -1,29 +1,28 @@
-# TÍTULO DO PROJETO
+# Criptogrid
 
-`CURSO`
+`ANÁLISE E DESENVOLVIMENTO DE SISTEMAS`
 
-`DISCIPLINA`
+`APLICAÇÕES DISTRIBUÍDAS`
 
-`SEMESTRE`
-
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+O projeto é centrado em trazer um dashboard que exiba informações simplificadas e diretas do mercado de Criptomoedas, assim descomplicando o acesso das pessoas à esse nicho.  
 
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
-* Nome completo do aluno 5
-* Nome completo do aluno 6
+* André Samuel T Fernandes
+* Bruno Nogueira Martins Cardoso
+* Camilla Zatz Manzini
+* Giovanni Gonçalves Shintaku
+* Guilherme Patrick Santos Alves
+* Junio Flausino Rocha
 
 ## Orientador
 
-* Nome completo do professor 1
+Leonardo Vilela Cardoso
 
 ## Instruções de utilização
 
-Assim que a primeira versão do sistema estiver disponível, deverá complementar com as instruções de utilização. Descreva como instalar eventuais dependências e como executar a aplicação.
+<a href="https://coin-grid-smoky.vercel.app/"> Deploy Frontend </a>
+<a href="http://camillamanzini-001-site1.ktempurl.com/swagger/index.html"> Deploy Backend </a>
 
 # Documentação
 
@@ -40,7 +39,7 @@ Assim que a primeira versão do sistema estiver disponível, deverá complementa
 <li><a href="docs/10-Registro de Testes de Sistema.md"> Registro de Testes de Sistema</a></li>
 <li><a href="docs/11-Registro de Contribuição.md"> Registro de Contribuição</a></li>
 <li><a href="docs/12-Apresentação do Projeto.md"> Apresentação do Projeto</a></li>
-<li><a href="docs/13-Referências.md"> Referências</a></li>
+<li><a href="docs/13-Considerações Finais.md"> Considerações Finais</a></li>
 </ol>
 
 # Código
@@ -50,3 +49,4 @@ Assim que a primeira versão do sistema estiver disponível, deverá complementa
 # Apresentação
 
 <li><a href="presentation/README.md"> Apresentação da solução</a></li>
+

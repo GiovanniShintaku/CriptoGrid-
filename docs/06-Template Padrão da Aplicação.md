@@ -1,12 +1,16 @@
 # Template Padrão da Aplicação
 
-<span style="color:red">Pré-requisitos: <a href="2-Especificação do Projeto.md"> Especificação do Projeto</a></span>, <a href="3-Projeto de Interface.md"> Projeto de Interface</a>, <a href="4-Metodologia.md"> Metodologia</a>
+![Paleta de Cores](./img/PaletaDeCores.png "Paleta de Cores") 
 
-Layout padrão das aplicações web e mobile que serão utilizado em todas as páginas com a definição de identidade visual, aspectos de responsividade e iconografia.
+![Logo](./img/LOGO.png "Logo") 
 
-> **Links Úteis**:
->
-> - [CSS Website Layout (W3Schools)](https://www.w3schools.com/css/css_website_layout.asp)
-> - [Website Page Layouts](http://www.cellbiol.com/bioinformatics_web_development/chapter-3-your-first-web-page-learning-html-and-css/website-page-layouts/)
-> - [Perfect Liquid Layout](https://matthewjamestaylor.com/perfect-liquid-layouts)
-> - [How and Why Icons Improve Your Web Design](https://usabilla.com/blog/how-and-why-icons-improve-you-web-design/)
+https://fonts.google.com/specimen/Orbitron
+
+https://fonts.google.com/specimen/Bungee
+
+https://fonts.google.com/specimen/Exo+2
+
+## CSS Padrão da Aplicação
+
+![CSS Variáveis](.src\web\src\styles\variables.css "Variáveis") 
+![CSS Global](.src\web\src\styles\global.css "Global") 

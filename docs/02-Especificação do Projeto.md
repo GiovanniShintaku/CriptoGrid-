@@ -6,11 +6,173 @@ Definição do problema e ideia de solução a partir da perspectiva do usuário
 
 Apresente uma visão geral do que será abordado nesta parte do documento, enumerando as técnicas e/ou ferramentas utilizadas para realizar a especificações do projeto
 
-## Personas
 
-Pedro Paulo tem 26 anos, é arquiteto recém-formado e autônomo. Pensa em se desenvolver profissionalmente através de um mestrado fora do país, pois adora viajar, é solteiro e sempre quis fazer um intercâmbio. Está buscando uma agência que o ajude a encontrar universidades na Europa que aceitem alunos estrangeiros.
+## Persona 1
 
-Enumere e detalhe as personas da sua solução. Para tanto, baseie-se tanto nos documentos disponibilizados na disciplina e/ou nos seguintes links:
+<table>
+  <tr>
+    <td colspan="2" style="background:#222;color:#fff;font-weight:bold;">
+      Perfil 1: André
+    </td>
+  </tr>
+  <tr>
+    <td style="vertical-align:top; width:320px;">
+      <ul>
+        <li><strong>Idade:</strong> 18 anos</li>
+        <li><strong>Profissão:</strong> Estagiário</li>
+        <li><strong>Formação:</strong> Estudante do curso de Engenharias</li>
+      </ul>
+      <img src="https://github.com/GiovanniShintaku/imageDump/blob/main/image.png" alt="André" width="300"/>
+    </td>
+    <td style="vertical-align:top;">
+      <strong>Descrição</strong><br>
+      André é estudante de Engenharia, é da classe média e mora na grande São Paulo. Ele acorda cedo todo dia para ir para a faculdade e da faculdade para o seu estágio, ele estuda engenharias mas sempre se interessou por Economia e finanças.
+      <br><br>
+      <strong>Necessidades</strong>
+      <ul>
+        <li> Acessar informações simples e coesas </li>
+        <li> Ter acesso às informações sem complicações de maneira que sempre estejam disponíveis as informações dos ativos. </li>
+      </ul>
+      <strong>Perspectivas</strong><br>
+      <strong>Angústias:</strong>
+      <br>
+      André por conta de sua rotina corrida não tem tempo de se dedicar a aprender sobre o mercado de Cripto moedas e por isso teme perder oportunidades.
+      <br><br>
+      <strong>Frustrações:</strong>
+      <br>
+      André se frustra com a complexidade do mercado de Cripto moedas e como essa barreira está entre ele e uma boa fonte de renda extra.
+      <br><br>
+      <strong>Expectativas:</strong>
+      <br>
+      André deseja um jeito que seja simples, objetivo e fácil de entender as Cripto moedas
+    </td>
+  </tr>
+</table>
+
+## Persona 2
+<table>
+  <tr>
+    <td colspan="2" style="background:#222;color:#fff;font-weight:bold;">
+      Perfil 2: Amanda 
+    </td>
+  </tr>
+  <tr>
+    <td style="vertical-align:top; width:320px;">
+      <ul>
+        <li><strong>Idade:</strong> 28 anos</li>
+        <li><strong>Profissão:</strong> Gerente de estratégias de negócio </li>
+        <li><strong>Formação:</strong> Formada em administração </li>
+      </ul>
+      <img src="https://github.com/GiovanniShintaku/imageDump/blob/main/pers2.jfif" alt="Amanda" width="300"/>
+    </td>
+    <td style="vertical-align:top;">
+      <strong>Descrição</strong><br>
+      Amanda atua como gerente de estratégias de negócio para uma startup em Belo Horizonte. Ela já sabe do potencial do mercado de cripto moedas e já tem uma carteira de investimentos há um tempo, seus hobbies são nadar e jogar golfe e por isso ela tem bastante tempo para estudar.
+      <br><br>
+      <strong>Necessidades</strong>
+      <ul>
+        <li> Acessar ao histórico de comportamento dos ativos </li>
+        <li> Ser capaz de interpretar rapidamente dados na timeline dos ativos </li>
+      </ul>
+      <strong>Perspectivas</strong><br>
+      <strong>Angústias:</strong>
+      <br>
+      Amanda acha o mercado das Cripto moedas muito volátil e arriscado por causa da imprevisibilidade.
+      <br><br>
+      <strong>Frustrações:</strong>
+      <br>
+      Amanda se frustra com a falta de transparência que esse mercado possui que dificulta acesso à informações essênciais para uma boa análise 
+      <br><br>
+      <strong>Expectativas:</strong>
+      <br>
+      Amanda deseja um histórico/timeline do comportamento das cripto moedas por ela escolhidas.
+    </td>
+  </tr>
+</table>
+
+## Persona 3
+<table>
+  <tr>
+    <td colspan="2" style="background:#222;color:#fff;font-weight:bold;">
+      Perfil 3: Eva 
+    </td>
+  </tr>
+  <tr>
+    <td style="vertical-align:top; width:320px;">
+      <ul>
+        <li><strong>Idade:</strong> 35 anos</li>
+        <li><strong>Profissão:</strong> Desempregada - autônoma </li>
+        <li><strong>Formação:</strong> Formada em Economia </li>
+      </ul>
+      <img src="https://github.com/GiovanniShintaku/imageDump/blob/main/pers3.jpg" alt="eva" width="300"/>
+    </td>
+    <td style="vertical-align:top;">
+      <strong>Descrição</strong><br>
+      Eva é de classe alta, atua na bolsa de valores integralmente do conforto de sua casa e faz disso sua renda principal. Ela já sabe em que e no que investir, possui TDAH e tem a visão um pouco mais fraca, seus hobbies são fotografia, equitação, e paraquedismo.
+      <br><br>
+      <strong>Necessidades</strong>
+      <ul>
+        <li> Acesso à uma interface user-friendly </li>
+        <li> Interpretar facilmente informações referentes às Cripto moedas </li>
+      </ul>
+      <strong>Perspectivas</strong><br>
+      <strong>Angústias:</strong>
+      <br>
+      Eva já possui Cripto moedas mas sabe que o mercado é complexo e teme ter problemas em acompanha-lo.
+      <br><br>
+      <strong>Frustrações:</strong>
+      <br>
+      Eva se frustra com o escesso de informações que muitas só servem para atrapalhar ou que muitas vezes estão de "enfeite" sem propósito. 
+      <br><br>
+      <strong>Expectativas:</strong>
+      <br>
+      Eva deseja uma interface estéticamente agradável e minimalista para trabalhar eficientemente.
+    </td>
+  </tr>
+</table>
+
+## Persona 4
+<table>
+  <tr>
+    <td colspan="2" style="background:#222;color:#fff;font-weight:bold;">
+      Perfil 4: Henrique  
+    </td>
+  </tr>
+  <tr>
+    <td style="vertical-align:top; width:320px;">
+      <ul>
+        <li><strong>Idade:</strong> 40 anos</li>
+        <li><strong>Profissão:</strong> Consultor financeiro de uma grande empresa </li>
+        <li><strong>Formação:</strong> Formado em Economia, Contabilidade e matemática </li>
+      </ul>
+      <img src="https://github.com/GiovanniShintaku/imageDump/blob/main/pers4.jpg" alt="henrique" width="300"/>
+    </td>
+    <td style="vertical-align:top;">
+      <strong>Descrição</strong><br>
+      Henrique atua como consultor financeiro para uma grande empresa no Rio de janeiro. Em sua profissão ele aconselha veêntemente a obtenção de ativos em forma de Cripto moedas para seus clientes, ele é uma pessoa séria e faz tudo da maneira mais correta possível.
+      <br><br>
+      <strong>Necessidades</strong>
+      <ul>
+        <li> Acessar ativos por meio de um filtro de pesquisa </li>
+        <li> Acessar ativos ordenados por preço, volume ou market cap. </li>
+        <li> Vaixar e exportar dados filtrados (por moeda e período) em formato CSV diretamente pela interface. </li>
+      </ul>
+      <strong>Perspectivas</strong><br>
+      <strong>Angústias:</strong>
+      <br>
+      Henrique teme que além de ninguém o ajudar em seu trabalho ainda o atrapalhem não disponibilizando jeitos fáceis de realizar seu trabalho.
+      <br><br>
+      <strong>Frustrações:</strong>
+      <br>
+      Henrique não gosta do quanto é difícil achar o ativo certo e salvar as informações referentes a ele. 
+      <br><br>
+      <strong>Expectativas:</strong>
+      <br>
+      Henrique demanda um jeito de filtrar, ordenar e salvar ativos para o uso de suas informações.
+    </td>
+  </tr>
+</table>
+
 
 > **Links Úteis**:
 > - [Rock Content](https://rockcontent.com/blog/personas/)
@@ -19,8 +181,6 @@ Enumere e detalhe as personas da sua solução. Para tanto, baseie-se tanto nos 
 > - [Persona x Público-alvo](https://flammo.com.br/blog/persona-e-publico-alvo-qual-a-diferenca/)
 > - [Mapa de Empatia](https://resultadosdigitais.com.br/blog/mapa-da-empatia/)
 > - [Mapa de Stalkeholders](https://www.racecomunicacao.com.br/blog/como-fazer-o-mapeamento-de-stakeholders/)
->
-Lembre-se que você deve ser enumerar e descrever precisamente e personalizada todos os clientes ideais que sua solução almeja.
 
 ## Histórias de Usuários
 
@@ -28,10 +188,10 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 
 |EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
 |--------------------|------------------------------------|----------------------------------------|
-|Usuário do sistema  | Registrar minhas tarefas           | Não esquecer de fazê-las               |
-|Administrador       | Alterar permissões                 | Permitir que possam administrar contas |
-
-Apresente aqui as histórias de usuário que são relevantes para o projeto de sua solução. As Histórias de Usuário consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação. Se possível, agrupe as histórias de usuário por contexto, para facilitar consultas recorrentes à essa parte do documento.
+|1-André   | Informações coesas e objetivas | Para que não se perca muito tempo tentando entender um monte de gráficos |
+|2-amanda  | Histórico/timeline dos ativos  | Permitir melhor aproveitamento de oportunidades |
+|3-Eva     | Interface simples e estéticamente agradável | Valorização dos elementos essenciais e eliminar distrações |
+|4-Henrique| Filtro com ordenação e exportação de dados | Eficiência e conveniência |
 
 > **Links Úteis**:
 > - [Histórias de usuários com exemplos e template](https://www.atlassian.com/br/agile/project-management/user-stories)
@@ -42,25 +202,40 @@ Apresente aqui as histórias de usuário que são relevantes para o projeto de s
 
 ## Requisitos
 
-As tabelas que se seguem apresentam os requisitos funcionais e não funcionais que detalham o escopo do projeto. Para determinar a prioridade de requisitos, aplicar uma técnica de priorização de requisitos e detalhar como a técnica foi aplicada.
+### 1. Requisitos Funcionais (RF)
 
-<strong>Crie no mínimo 12 Requisitos funcionais, 6 não funcionais e 3 restrições</strong>
-<strong>Cada aluno será responsável pela execução completa (back, web e mobile) de pelo menos 2 requisitos que será acompanhado pelo professor</strong>
 ### Requisitos Funcionais
 
-|ID    | Descrição do Requisito  | Prioridade | Responsável |
-|------|-----------------------------------------|----|----|
-|RF-001| Permitir que o usuário cadastre tarefas | ALTA | Pedro |
-|RF-002| Emitir um relatório de tarefas no mês   | MÉDIA | João |
+| ID | Descrição | Prioridade | Responsável |
+|:---|:--- |:---|:---|
+| RF-01 | O sistema deve consumir periodicamente uma API pública. | Alta | Camilla |
+| RF-02 | O sistema deve armazenar em um banco de dados NoSQL os dados coletados da API. | Alta | Camilla |
+| RF-03 | O sistema deve manter registros históricos dos dados por moeda. | Alta | Camilla |
+| RF-04 | O sistema deve ter uma API REST para seguir o modelo cliente-servidor. | Alta |Giovanni|
+| RF-05 | O sistema deve permitir aplicar filtros por período ou categoria. | Alta | Camilla |
+| RF-06 | O sistema deve permitir ordenação por ordem alfabética, preço, volume ou market cap. | Alta | Giovanni |
+| RF-07 | O sistema deve permitir que o usuário exporte e baixe os dados filtrados em formato CSV diretamente pela interface. | Alta | Junio |
+| RF-08 | O sistema deve exibir um painel com dados resumidos para o período selecionado, incluindo preço máximo, preço mínimo e variação percentual 24h (%). | Alta | Junio |
+| RF-09 | O sistema deve exibir gráficos de vela e tabelas de cotação de criptomoedas. | Alta | Andre |
+| RF-10 | O sistema deve exibir loading states durante a coleta de dados ou carregamento de gráficos. | Alta | Andre |
+| RF-11 | O sistema deve permitir ao usuário selecionar uma moeda e um período para análise. | Alta | Camilla |
+| RF-12 | O sistema deve realizar autenticação do usuário. | Alta | Bruno |
+| RF-13 | O sistema deve permitir que o usuário marque as moedas favoritas dentro da área logada. | Alta | Bruno |
+| RF-14 | O sistema deve fazer recomendações dentro da área logada de acordo com as preferências do usuário. | Alta | Giovanni |
+| RF-15 | O sistema deve permitir que o usuário escolha a moeda de preferência do usuário | Alta | Guilherme |
+| RF-16 | O sistema deve permitir que o usuário visualize as moedas em tendência mais recentes | Alta | Guilherme |
+| RF-17 | O sistema deve permitir que o usuário receba notificação das novas moedas lançadas dentro da área logada | Alta | André |
 
 ### Requisitos não Funcionais
 
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|----|
-|RNF-001| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA | 
-|RNF-002| Deve processar requisições do usuário em no máximo 3s |  BAIXA | 
-
-Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
+|RNF-01| O sistema deve ser multiplataforma, funcionando em dispositivos móveis (Android e iOS) e também na versão web. | Alta | 
+|RNF-02| O sistema deve utilizar um banco de dados não relacional. |  Alta | 
+|RNF-03| O sistema deve possuir responsividade na interface, adaptando-se automaticamente a diferentes tamanhos de tela (celulares, tablets, desktops). |  Alta |
+|RNF-04| O sistema deve garantir alta disponibilidade, permitindo que os usuários acessem os dados 24/7, salvo períodos programados de manutenção. |  Média |
+|RNF-05| O sistema deve apresentar uma interface intuitiva e minimalista, priorizando usabilidade e clareza das informações. |  Alta |
+|RNF-06| O sistema deve suportar atualizações automáticas periódicas dos dados sem intervenção manual do usuário. |  Média |
 
 - [Requisitos Funcionais
  (RF)](https://pt.wikipedia.org/wiki/Requisito_funcional):
@@ -92,16 +267,13 @@ Enumere as restrições à sua solução. Lembre-se de que as restrições geral
 
 ## Diagrama de Casos de Uso
 
-O diagrama de casos de uso é o próximo passo após a elicitação de requisitos, que utiliza um modelo gráfico e uma tabela com as descrições sucintas dos casos de uso e dos atores. Ele contempla a fronteira do sistema e o detalhamento dos requisitos funcionais com a indicação dos atores, casos de uso e seus relacionamentos. 
+<img width="654" height="549" alt="image" src="https://github.com/user-attachments/assets/e25a10fc-5d86-4be2-985a-97d7f306578b" />
 
-As referências abaixo irão auxiliá-lo na geração do artefato “Diagrama de Casos de Uso”.
+## Matriz de Rastreabilidade
 
-> **Links Úteis**:
-> - [Criando Casos de Uso](https://www.ibm.com/docs/pt-br/elm/6.0?topic=requirements-creating-use-cases)
-> - [Como Criar Diagrama de Caso de Uso: Tutorial Passo a Passo](https://gitmind.com/pt/fazer-diagrama-de-caso-uso.html/)
-> - [Lucidchart](https://www.lucidchart.com/)
-> - [Astah](https://astah.net/)
-> - [Diagrams](https://app.diagrams.net/)
+A matriz de rastreabilidade é uma ferramenta que relaciona os requisitos de um sistema com os elementos do projeto ou funcionalidades que os implementam, permitindo acompanhar se todos os requisitos foram contemplados, identificar impactos de mudanças e facilitar a verificação e validação do software.
+
+<img width="1093" height="598" alt="image" src="https://github.com/user-attachments/assets/5bfec2ba-96db-4982-84a4-b54e3ce78d20" />
 
 
 # Gerenciamento de Projeto
@@ -110,9 +282,13 @@ De acordo com o PMBoK v6 as dez áreas que constituem os pilares para gerenciar 
 
 ## Gerenciamento de Tempo
 
-Com diagramas bem organizados que permitem gerenciar o tempo nos projetos, o gerente de projetos agenda e coordena tarefas dentro de um projeto para estimar o tempo necessário de conclusão.
-
-![Diagrama de rede simplificado notação francesa (método francês)](img/02-diagrama-rede-simplificado.png)
+| Etapa | Duração | Descrição | 
+| ----- | ------- | --------- |
+| Etapa 1| 01/08 a 07/09| Concepção, Proposta de Solução e Início da Elaboração do Projeto da Solução |
+| Etapa 2| 08/09 a 05/10| Desenvolvimento do Back-end: Web API |
+| Etapa 3| 06/10 a 26/10| Desenvolvimento do Front-end: Web |
+| Etapa 4| 27/10 a 16/11| Desenvolvimento do Front-end: Mobile |
+| Etapa 5| 17/11 a 07/12| Diagnóstico, entrega da solução e apresentação |
 
 O gráfico de Gantt ou diagrama de Gantt também é uma ferramenta visual utilizada para controlar e gerenciar o cronograma de atividades de um projeto. Com ele, é possível listar tudo que precisa ser feito para colocar o projeto em prática, dividir em atividades e estimar o tempo necessário para executá-las.
 
@@ -124,3 +300,12 @@ O gerenciamento adequado de tarefas contribuirá para que o projeto alcance alto
 
 ![Simple Project Timeline](img/02-project-timeline.png)
 
+## Gestão de Custos
+
+O processo de determinar o orçamento do projeto é uma tarefa que depende, além dos produtos (saídas) dos processos anteriores do gerenciamento de custos, também de produtos oferecidos por outros processos de gerenciamento, como o escopo e o tempo.
+
+<img width="635" height="192" alt="image" src="https://github.com/user-attachments/assets/59cb163b-b2c5-4d0d-afba-77c62d28a4bc" />
+
+*Cálculos realizados considerando 1000 horas de desenvolvimento, ou 6 meses de projeto - aproximadamente.
+
+**Cálculos realizados para os 6 primeiros meses de produção, tendo em vista que os valores mensais e anuais de servidores, Google Play Store e Apple Store continuarão a serem cobrados.

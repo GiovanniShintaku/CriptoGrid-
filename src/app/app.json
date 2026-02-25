@@ -1,0 +1,47 @@
+{
+  "expo": {
+    "name": "CriptoGrid",
+    "slug": "cripto-grid",
+    "version": "1.0.0",
+    "orientation": "portrait",
+
+    "icon": "./src/assets/logo.png",
+
+    "scheme": "cripto-grid",
+    "userInterfaceStyle": "dark",
+    "newArchEnabled": true,
+
+    "splash": {
+      "image": "./src/assets/logo.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#000000"
+    },
+
+    "ios": {
+      "supportsTablet": true
+    },
+
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./src/assets/logo.png",
+        "backgroundColor": "#000000"
+      },
+      "edgeToEdgeEnabled": true,
+      "predictiveBackGestureEnabled": false
+    },
+
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./src/assets/logo.png"
+    },
+
+    "plugins": [
+      "expo-router"
+    ],
+
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}

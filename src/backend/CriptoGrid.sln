@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35931.197
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pmv-ads-2025-2-e4-CriptoGrid-t1", "pmv-ads-2025-2-e4-CriptoGrid-t1\pmv-ads-2025-2-e4-CriptoGrid-t1.csproj", "{8F867824-1A46-41D0-90D0-351BFF15CF4B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataIngest_CoinGecko", "DataIngest_CoinGecko\DataIngest_CoinGecko.csproj", "{73BB1F83-7AAE-4A62-A4FB-A12B5D0BEB30}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OHLCIngest_CoinGecko", "OHLCIngest_CoinGecko\OHLCIngest_CoinGecko.csproj", "{D54D9F13-677A-4E52-A0C2-D374EFCFE5F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoinGrid_Teste", "CoinGrid_Teste\CoinGrid_Teste.csproj", "{C2CDC99B-7FD6-4D22-B193-F92B1CA09CD3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CriptoGrid_BackfillWorker", "CriptoGrid_BackfillWorker\CriptoGrid_BackfillWorker.csproj", "{96DAA1C4-C9BD-4E70-BA6F-A924DB2CE662}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Itens de Solução", "Itens de Solução", "{380A7511-A354-6D7A-0CC0-8FA1F1BA7B6C}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8F867824-1A46-41D0-90D0-351BFF15CF4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F867824-1A46-41D0-90D0-351BFF15CF4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F867824-1A46-41D0-90D0-351BFF15CF4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F867824-1A46-41D0-90D0-351BFF15CF4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73BB1F83-7AAE-4A62-A4FB-A12B5D0BEB30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73BB1F83-7AAE-4A62-A4FB-A12B5D0BEB30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73BB1F83-7AAE-4A62-A4FB-A12B5D0BEB30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73BB1F83-7AAE-4A62-A4FB-A12B5D0BEB30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D54D9F13-677A-4E52-A0C2-D374EFCFE5F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D54D9F13-677A-4E52-A0C2-D374EFCFE5F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D54D9F13-677A-4E52-A0C2-D374EFCFE5F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D54D9F13-677A-4E52-A0C2-D374EFCFE5F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2CDC99B-7FD6-4D22-B193-F92B1CA09CD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2CDC99B-7FD6-4D22-B193-F92B1CA09CD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2CDC99B-7FD6-4D22-B193-F92B1CA09CD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2CDC99B-7FD6-4D22-B193-F92B1CA09CD3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96DAA1C4-C9BD-4E70-BA6F-A924DB2CE662}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96DAA1C4-C9BD-4E70-BA6F-A924DB2CE662}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96DAA1C4-C9BD-4E70-BA6F-A924DB2CE662}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96DAA1C4-C9BD-4E70-BA6F-A924DB2CE662}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8B0F4A64-E6DF-4A03-AA06-B9C2A2CD1DFB}
+	EndGlobalSection
+EndGlobal

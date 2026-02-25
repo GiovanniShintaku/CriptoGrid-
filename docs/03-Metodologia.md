@@ -19,20 +19,19 @@ foi utilizado para hospedagem do repositório.
 O projeto segue a seguinte convenção para o nome de branches:
 
 - `main`: versão estável já testada do software
-- `unstable`: versão já testada do software, porém instável
-- `testing`: versão em testes do software
-- `dev`: versão de desenvolvimento do software
-
+- `dev`: versão de teste do software
+- `dev(IDRequisito)-(NomeResponsavel)`: versão de desenvolvimento do software
+  
 Quanto à gerência de issues, o projeto adota a seguinte convenção para
 etiquetas:
 
-- `documentation`: melhorias ou acréscimos à documentação
-- `bug`: uma funcionalidade encontra-se com problemas
-- `enhancement`: uma funcionalidade precisa ser melhorada
-- `feature`: uma nova funcionalidade precisa ser introduzida
+- `Backlog`: Lista do que há que ser feito 
+- `Fazendo`: Uma funcionalidade/item que já está sendo feito
+- `Revisão`: Uma funcionalidade/item que precisa ser revisada
+- `Ajustar`: Uma funcionalidade/item que não passou na revisão e precisa ser ajustada
+- `Entregue`: Uma nova funcionalidade/item que está pronta e foi integrada à solução
 
-Discuta como a configuração do projeto foi feita na ferramenta de versionamento escolhida. Exponha como a gerência de tags, merges, commits e branchs é realizada. Discuta como a gerência de issues foi realizada.
-
+Ao decorrer do projeto todas as branchs serão baseadas da branch Dev, os integrantes do time vão criar uma branch nova com o nome dev seguido do id do requisito assumido e o nome de quem o assumiu, ao terminar o desenvolvimento da funcionalidade será feito o Merge na branch Dev original no caso de não haver conflitos, ao final da etapa quando tudo estiver testado, ajustado e pronto ocorrerá um merge da Dev para a main para ser feita a entrega.
 > **Links Úteis**:
 > - [Microfundamento: Gerência de Configuração](https://pucminas.instructure.com/courses/87878/)
 > - [Tutorial GitHub](https://guides.github.com/activities/hello-world/)
@@ -48,19 +47,15 @@ Discuta como a configuração do projeto foi feita na ferramenta de versionament
 Apresente a divisão de papéis entre os membros do grupo.
 
 Exemplificação: A equipe utiliza metodologias ágeis, tendo escolhido o Scrum como base para definição do processo de desenvolvimento. A equipe está organizada da seguinte maneira:
-- Scrum Master: Felipe Domingos;
-- Product Owner: Rommel Carneiro;
-- Equipe de Desenvolvimento: Pedro Penna, Pedro Ivo, Rodrigo Richard;
-- Equipe de Design: Simone Nogueira.
-
-> **Links Úteis**:
-> - [11 Passos Essenciais para Implantar Scrum no seu Projeto](https://mindmaster.com.br/scrum-11-passos/)
-> - [Scrum em 9 minutos](https://www.youtube.com/watch?v=XfvQWnRgxG0)
-> - [Os papéis do Scrum e a verdade sobre cargos nessa técnica](https://www.atlassian.com/br/agile/scrum/roles)
+- Product Owner: Camilla M.;
+- Scrum Master: Giovanni S.;
+- Equipe de Desenvolvimento: Camilla M., André F., Giovanni S., Brunno N., Guilherme, Junio;
+- Project manager: Camilla M., Giovanni S., Leoneardo V.;
+- Quality Assurance: Camilla M., André F., Giovanni S., Brunno N., Guilherme, Junio;
 
 ### Processo
 
-Coloque  informações sobre detalhes da implementação do Scrum seguido pelo grupo. O grupo deverá fazer uso do recurso de gerenciamento de projeto oferecido pelo GitHub, que permite acompanhar o andamento do projeto, a execução das tarefas e o status de desenvolvimento da solução.
+O grupo está fazendo uso do quadro Kanban do projeto para acompanhamento do progresso feito por cada membro, havendo também reuniões semanais a parte com duração aproximada de 40 minutos com os integrantes para resolução de qualquer impedimento.
  
 > **Links Úteis**:
 > - [Planejamento e Gestáo Ágil de Projetos](https://pucminas.instructure.com/courses/87878/pages/unidade-2-tema-2-utilizacao-de-ferramentas-para-controle-de-versoes-de-software)
@@ -74,13 +69,11 @@ Coloque  informações sobre detalhes da implementação do Scrum seguido pelo g
 
 As ferramentas empregadas no projeto são:
 
-- Editor de código.
-- Ferramentas de comunicação
-- Ferramentas de desenho de tela (_wireframing_)
+- Visual Studio (IDE).
+- Teams
+- Photoshop (_wireframing_)
 
-O editor de código foi escolhido porque ele possui uma integração com o sistema de versão. As ferramentas de comunicação utilizadas possuem integração semelhante e por isso foram selecionadas. Por fim, para criar diagramas utilizamos essa ferramenta por melhor captar as necessidades da nossa solução.
-
-Liste quais ferramentas foram empregadas no desenvolvimento do projeto, justificando a escolha delas, sempre que possível.
+O Visual Studio foi escolhido porque ele possui uma integração com o sistema de versão e é a convenção no que se refere a desenvolvimento de código. As ferramentas de comunicação utilizadas possuem integração semelhante, são as usadas oficialmente pelos canais da faculdade e por isso foram selecionadas. Por fim, para criar diagramas utilizamos o photoshop por melhor captar as necessidades da nossa solução.
  
 > **Possíveis Ferramentas que auxiliarão no gerenciamento**: 
 > - [Slack](https://slack.com/)

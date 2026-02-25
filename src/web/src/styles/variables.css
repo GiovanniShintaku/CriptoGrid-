@@ -1,0 +1,26 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Orbitron:wght@400;600;700&family=Exo+2:wght@400;600;700&display=swap');
+
+:root {
+  /* Tipografia */
+  --font-h1: 'Bungee', system-ui, sans-serif;
+  --font-hx: 'Orbitron', system-ui, sans-serif;
+  --font-body: 'Exo 2', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+
+  /* Cores base (dark) */
+  --bg: #0b0e1a;
+  --panel: #0f1326;
+  --text: #eaeaea;
+  --muted: #9aa0a6;
+
+  /* Variações */
+  --pos: #2DEE85; /* positivo */
+  --neg: #F60A0C; /* negativo */
+
+  /* Destaques */
+  --accent: #00e0ff;
+  --accent-pink: #FF2BD1;
+}
+
+/* COMO USAR NO CÓDIGO 
+import "./styles/variables.css";*/

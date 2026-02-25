@@ -1,0 +1,124 @@
+
+# ===============================
+#  Node.js / JavaScript
+# ===============================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Build output
+dist/
+build/
+tmp/
+temp/
+coverage/
+.cache/
+
+# ===============================
+#  IDEs e Editores
+# ===============================
+
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+**.vsidx
+
+# Visual Studio Code
+.vscode/
+.history/
+*.code-workspace
+
+# JetBrains / IntelliJ
+.idea/
+
+# ===============================
+#  Sistema Operacional
+# ===============================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
+.nfs*
+
+# ===============================
+#  Logs e temporários
+# ===============================
+*.log
+logs/
+*.pid
+*.seed
+*.pid.lock
+
+# ===============================
+#  Backend (Workers .NET / Node)
+# ===============================
+src/backend/**/*.tsbuildinfo
+src/backend/coverage/
+src/backend/dist/
+src/backend/.env
+src/backend/.env.*
+
+# Ignorar binários e builds de TODOS os workers .NET
+src/backend/**/bin/
+src/backend/**/obj/
+src/backend/**/out/
+src/backend/**/publish/
+src/backend/**/artifacts/
+
+# ===============================
+#  Frontend (React / Vite / Next.js)
+# ===============================
+src/web/node_modules/
+src/web/.next/
+src/web/out/
+src/web/build/
+src/web/.env
+src/web/.env.*
+
+# ===============================
+#  Específicos do CriptoGrid (opcional)
+# ===============================
+# Checkpoints e logs locais
+src/backend/**/checkpoints/
+src/backend/**/logs/
+*.checkpoint.json
+*.history.json
+
+# ===============================
+#  Regras adicionais para .NET
+# ===============================
+bin/
+obj/
+*.dll
+*.exe
+*.pdb
+*.cache
+*.log
+*.user
+*.suo
+
+# AppSettings específicos de dev/local
+appsettings.Development.json
+appsettings.Local.json
+
+# Pacotes NuGet
+**/packages/

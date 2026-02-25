@@ -1,0 +1,129 @@
+@import './variables.css';
+
+html, body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.65;
+    overflow-x: hidden;
+}
+h1 {
+  font-family: var(--font-h1);
+  text-transform: uppercase;
+  letter-spacing: .03em;
+  line-height: 1.15;
+}
+h2, h3 {
+  font-family: var(--font-hx);
+  letter-spacing: .015em;
+  line-height: 1.2;
+}
+
+/* Cards/painéis */
+.card {
+  background: var(--panel);
+  border-radius: 14px;
+  padding: 16px 18px;
+  box-shadow: 0 0 0 1px rgba(255,255,255,.03), 0 8px 24px rgba(0,0,0,.35);
+}
+
+/* Utilitários de variação */
+.text-pos { color: var(--pos); }
+.text-neg { color: var(--neg); }
+.bg-pos   { background: color-mix(in oklab, var(--pos) 15%, transparent); }
+.bg-neg   { background: color-mix(in oklab, var(--neg) 15%, transparent); }
+
+/* Destaques */
+.text-accent      { color: var(--accent); }
+.text-accent-pink { color: var(--accent-pink); }
+.bg-accent-pink   { background: color-mix(in oklab, var(--accent-pink) 14%, transparent); }
+
+/* Botões */
+.btn-accent-pink {
+  color: #fff;
+  background: linear-gradient(180deg, var(--accent-pink), color-mix(in oklab, var(--accent-pink) 70%, #8a00ff));
+  border: 1px solid color-mix(in oklab, var(--accent-pink) 60%, #ffffff);
+  box-shadow: 0 8px 28px rgba(255, 43, 209, 0.25);
+  border-radius: 10px;
+  padding: 8px 12px;
+  font-family: var(--font-hx);
+  letter-spacing: .02em;
+}
+
+/* Chips/Badges */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-family: var(--font-hx);
+}
+.chip.pos { color: var(--pos); background: color-mix(in oklab, var(--pos) 18%, transparent); }
+.chip.neg { color: var(--neg); background: color-mix(in oklab, var(--neg) 18%, transparent); }
+.chip.pink { color: var(--accent-pink); background: color-mix(in oklab, var(--accent-pink) 18%, transparent); }
+
+/* Setinhas */
+.delta { font-variant-numeric: tabular-nums lining-nums; letter-spacing: .01em; }
+.delta.pos::before { content: "▲ "; }
+.delta.neg::before { content: "▼ "; }
+
+/* Sparklines */
+.sparkline path.pos   { stroke: var(--pos); }
+.sparkline path.neg   { stroke: var(--neg); }
+.sparkline path.alert { stroke: var(--accent-pink); }
+
+/* Glow / Neon */
+.neon { text-shadow: 0 0 8px currentColor, 0 0 18px currentColor, 0 0 36px currentColor; }
+.glow-pink { text-shadow: 0 0 8px var(--accent-pink), 0 0 18px var(--accent-pink), 0 0 36px var(--accent-pink); }
+
+/* Tabelas */
+.num { font-variant-numeric: tabular-nums lining-nums; }
+
+/* Estados neutros */
+.muted { color: var(--muted); }
+
+/* COMO USAR NO CÓDIGO 
+import "./styles/global.css";*/
+
+.nav-btn.home-inline {
+  display: block;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: var(--panel);
+  margin: 4px 0;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.nav-btn.home-inline:hover {
+  background: var(--accent-pink);
+  transform: scale(1.02);
+  color: white;
+}
+
+button {
+  outline: none;
+  border: none;
+}
+
+button:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.25);
+  outline-offset: 2px;
+}
+
+.transition-all {
+  transition: all 0.2s ease-in-out;
+}
+button {
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+button:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.15);
+  outline-offset: 2px;
+}

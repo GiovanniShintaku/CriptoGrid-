@@ -1,91 +1,44 @@
-# Testes de Integração no Backend
+## 🔰 Relatório de Testes de integração – Backend CriptoGrid
 
-## O que são Testes de Integração?
+### Ambiente de Testes
+- **Framework:** .NET 8.0  
+- **Biblioteca de testes:** xUnit  
+- **Ferramentas auxiliares:** Moq, MongoDB.Driver, Microsoft.Extensions.Options  
+- **Projeto de Testes:** `CriptoGrid.IntegrationTest`  
+- **Projeto Principal:** `pmv-ads-2025-2-e4-CriptoGrid-t1`
 
-Testes de integração são testes automatizados que verificam se diferentes módulos ou componentes de um sistema funcionam corretamente quando integrados. Ao contrário dos testes unitários, que testam pequenas unidades isoladas de código, os testes de integração focam na interação entre várias partes do sistema, como classes, bancos de dados, APIs externas, entre outros.
+---
 
-## Por que são Importantes?
+### Escopo dos Testes
+Os testes de integração foram aplicados sobre toda a solução com enfase nas classes `PublicDataService`, `PublicDataController` e `CoinData` responsável pela manipulação e consulta de dados públicos das criptomoedas no banco MongoDB.
 
-Testes de integração ajudam a:
+---
 
-- Garantir que os diferentes componentes do sistema funcionem bem juntos.
-- Detectar problemas que possam surgir da interação entre módulos, como erros de comunicação ou incompatibilidades.
-- Validar cenários de uso realistas, onde múltiplas partes do sistema precisam interagir.
+### Resultados da Execução
 
-## Configuração do Ambiente
+pmv-ads-2025-2-e4-CriptoGrid-t1 êxito(s) com 3 aviso(s) (8,3s) → pmv-ads-2025-2-e4-CriptoGrid-t1\bin\Debug\net8.0\pmv-ads-2025-2-e4-CriptoGrid-t1.dll
+C:\Users\T-Gamer\Documents\GitHub\pmv-ads-2025-2-e4-infra-t1-pmv-ads-2025-2-e4-infra-t1\src\backend\pmv-ads-2025-2-e4-CriptoGrid-t1\Models\UserAuthData.cs(12,23): warning CS8618: 0 propriedade não anulável 'Email' precisa conter um valor não nulo ao sair do constru
+tor. Considere adicionar o modificador "obrigatório" ou declarar o propriedade como anulável.
+C:\Users\T-Gamer\Documents\GitHub\pmv-ads-2025-2-e4-infra-t1-pmv-ads-2025-2-e4-infra-t1\src\backend\pmv-ads-2025-2-e4-CriptoGrid-t1\Models\UserAuthData.cs(13,23): warning CS8618: 0 propriedade não anulável 'Password' precisa conter um valor não nulo ao sair do cons
+trutor. Considere adicionar o modificador "obrigatório" ou declarar o propriedade como anulável.
+C:\Users\T-Gamer\Documents\GitHub\pmv-ads-2025-2-e4-infra-t1-pmv-ads-2025-2-e4-infra-t1\src\backend\pmv-ads-2025-2-e4-CriptoGrid-t1\Models\UserAuthData.cs(14,23): warning CS8618: 0 propriedade não anulável 'Name' precisa conter um valor não nulo ao sair do construt
+or. Considere adicionar o modificador "obrigatório" ou declarar o propriedade como anulável.
+CoinGrid Teste êxito (1,6s) → CoinGrid Teste\bin\Debug\net8.0\CoinGrid Teste.dll
+CriptoGrid.Integration Tests êxito (4,0s) → CriptoGrid.IntegrationTests\bin\Debug\net9.0\CriptoGrid.IntegrationTests.dll
+[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v2.8.2+699d445a1a (64-bit .NET 9.0.4)
+[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v3.1.5+1b188a7b0a (64-bit .NET 8.0.15)
+[xUnit.net 00:00:00.58] Discovering: CoinGrid Teste
+[xUnit.net 00:00:00.67]
+Discovered: CoinGrid Teste
+[xUnit.net 00:00:00.70] Starting: CoinGrid Teste
+[xUnit.net 00:00:00.95]
+[xUnit.net 00:00:01.02]
+[xUnit.net 00:00:01.02]
+Discovering: CriptoGrid.IntegrationTests
+Discovered: CriptoGrid.IntegrationTests
+Starting: CriptoGrid.IntegrationTests
+[xUnit.net 00:00:03.29] Finished:
 
-Para começar a escrever testes de integração em um projeto backend utilizando C#, siga os passos abaixo:
-
-1. **Instale o .NET SDK**: Certifique-se de ter o [.NET SDK](https://dotnet.microsoft.com/download) instalado.
-
-2. **Crie um projeto de testes**: No terminal, navegue até o diretório do seu projeto e execute o seguinte comando para criar um projeto de testes usando xUnit:
-
-    ```bash
-    dotnet new xunit -o tests
-    ```
-
-3. **Adicione uma referência ao seu projeto principal**: No diretório do projeto de testes, adicione uma referência ao seu projeto principal:
-
-    ```bash
-    dotnet add reference ../src/MyProject.csproj
-    ```
-
-4. **Configure um banco de dados para testes**: Se seu projeto interage com um banco de dados, considere usar um banco de dados em memória (como o SQLite in-memory) ou configurar um ambiente de banco de dados separado para os testes.
-
-5. **Organize sua estrutura de diretórios**: Uma estrutura comum de projeto é a seguinte:
-
-    ```
-    MyProject/
-    ├── src/
-    │   └── MyProject.cs
-    └── tests/
-        └── MyProject.IntegrationTests.cs
-    ```
-
-## Exemplo de Teste de Integração
-
-Vamos supor que temos um método na classe `UserService` que adiciona um usuário a um banco de dados. Queremos testar se esse método funciona corretamente ao interagir com o banco de dados.
-
-### Código de Exemplo
-
-Aqui está a implementação da classe `UserService`:
-
-```csharp
-// src/MyProject.cs
-
-using System.Data.SqlClient;
-
-namespace MyProject
-{
-    public class UserService
-    {
-        private readonly string _connectionString;
-
-        public UserService(string connectionString)
-        {
-            _connectionString = connectionString;
-        }
-
-        public void AddUser(string name, string email)
-        {
-            using (var connection = new SqlConnection(_connectionString))
-            {
-                connection.Open();
-                var command = new SqlCommand("INSERT INTO Users (Name, Email) VALUES (@Name, @Email)", connection);
-                command.Parameters.AddWithValue("@Name", name);
-                command.Parameters.AddWithValue("@Email", email);
-                command.ExecuteNonQuery();
-            }
-        }
-
-        public int GetUserCount()
-        {
-            using (var connection = new SqlConnection(_connectionString))
-            {
-                connection.Open();
-                var command = new SqlCommand("SELECT COUNT(*) FROM Users", connection);
-                return (int)command.ExecuteScalar();
-            }
-        }
-    }
-}
+Resumo do teste: total: 5; falhou: 0; bem-sucedido: 5; ignorado: 0; duração: 13,0s
+Construir êxito(s) com 3 aviso(s) em 26,4s
+       

@@ -1,0 +1,6 @@
+@pmv_ads_2025_2_e4_CriptoGrid_t1_HostAddress = http://localhost:5044
+
+GET {{pmv_ads_2025_2_e4_CriptoGrid_t1_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

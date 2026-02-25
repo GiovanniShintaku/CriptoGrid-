@@ -1,0 +1,226 @@
+@import './global.css';
+
+.GridTop {
+    display: flex;
+    align-items: center;
+    margin: 1.5rem 0 1rem 6.9rem;
+}
+
+h3 {
+    margin-left: 7.1rem;
+}
+
+.btn {
+    width: 25rem;
+    height: 54.2px;
+    background: rgb(22, 27, 40);
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+    padding: 16px;
+    margin-right: 1rem;
+    align-items: center;
+    gap: 6px;
+    color: var(--text);
+    font-family: var(--font-hx);
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+.dropDown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropDownContent {
+    position: absolute;
+    cursor: pointer;
+    margin-top: 4px;
+    width: 400px;
+    z-index: 1000;
+    color: var(--text);
+    font-family: var(--font-hx);
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+.dropdownContent .btn {
+    width: inherit;
+    margin-top: 5rem;
+}
+
+.dropdownContent button {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropDown:hover .dropdownContent {
+    display: block;
+    border: var(--accent) 1px solid;
+    
+}
+
+.addBtnDiv {
+    display:flex;
+    justify-content: right;
+    align-items: center;
+    width: 73%;
+}
+
+.addBtn {
+    background: var(--accent-pink);
+    border: none;
+    cursor: pointer;
+    height: 4.3rem;
+    padding: 1rem 1rem 0rem 1rem;
+    border-radius: 16%;
+    color: var(--text);
+    font-family: var(--font-hx);
+    font-size: 6rem;
+    text-decoration: none;
+    transition: 0.2s ease;
+    margin-left: 1.3rem
+    
+}
+
+.plus {
+    position: relative;
+    top: -3rem;
+}
+
+.btn:hover {
+    border: var(--accent-pink) 1px solid;
+}
+
+li {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.GridLeft {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    height: calc(100vh - 80px);
+    width: 90px;
+    background: var(--panel);
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    padding-top: 2rem;
+    gap: 2rem;
+    z-index: 900;
+}
+
+.GridLeft .side-btn {
+    background-color: transparent;
+    border: none;
+    color: var(--text);
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.9rem;
+}
+
+.GridLeft .side-btn:hover {
+    color: var(--accent-pink);
+    transform: scale(1.05);
+}
+
+.GridLeft .side-btn svg,
+.GridLeft .side-btn img {
+    width: 28px;
+    height: 28px;
+}
+
+.Grid {
+    margin-left: 110px; 
+    margin-bottom: 5.6rem;
+
+}
+
+.gridItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-top: 60px;
+    font-family: var(--font-hx);
+}
+
+    .pagination button {
+        background: transparent;
+        border: none;
+        color: var(--accent-pink);
+        font-size: 1.4rem;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+    }
+
+.pagination button:hover {
+         text-shadow: 0 0 10px var(--accent-pink);
+}
+
+.pagination button.active {
+         color: var(--accent);
+         text-shadow: 0 0 8px var(--accent);
+         font-weight: bold;
+}
+.pagination button:disabled {
+         opacity: 0.3;
+         cursor: not-allowed;
+}
+
+.checkbox {
+    width: 20px;
+    height: 20px;
+    accent-color: var(--accent-pink);
+    cursor: pointer;
+}
+
+.textNoFav {
+    font-family: var(--font-hx);
+    font-size: 1.2rem;
+    color: var(--text);
+    margin-top: 0.5rem;
+    margin-bottom: 53rem;
+    text-align: center;
+}
+
+.profileItem {
+    max-width: 1930px;
+}
+
+.tableItem {
+    width: 1930px;
+}
+@media (max-width: 768px) {
+    .GridLeft {
+        width: 60px;
+        gap: 1rem;
+    }
+
+    .Grid {
+        margin-left: 70px;
+    }
+}

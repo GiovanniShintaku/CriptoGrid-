@@ -1,0 +1,81 @@
+import React from "react";
+import {
+  SafeAreaView,
+  View,
+  Text,
+  TouchableOpacity,
+  StyleSheet,
+  Image,
+  Platform,
+  StatusBar,
+} from "react-native";
+import { ArrowLeft, User } from "lucide-react-native";
+import { useNavigation } from "@react-navigation/native";
+
+export default function HeaderCoin() {
+  const navigation = useNavigation<any>();
+
+  return (
+    <SafeAreaView style={styles.safe}>
+      <View style={styles.header}>
+        <TouchableOpacity
+          style={styles.side}
+          onPress={() => navigation.navigate("Home")}
+        >
+        <ArrowLeft size={28} color="#ff2bd1" />
+        </TouchableOpacity>
+
+        <TouchableOpacity onPress={() => navigation.navigate("Home")}> 
+        <View style={styles.center}>
+          <Image source={require("../assets/logo.png")} style={styles.logo} />
+          <Text style={styles.title}>CriptoGrid</Text>
+        </View>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.side}
+          onPress={() => navigation.navigate("Profile")}
+        >
+          <User color="#fff" size={26} />
+        </TouchableOpacity>
+      </View>
+    </SafeAreaView>
+  );
+}
+
+const STATUS_BAR_HEIGHT =
+  Platform.OS === "android" ? StatusBar.currentHeight || 24 : 24;
+
+const styles = StyleSheet.create({
+  safe: {
+    backgroundColor: "#000",
+  },
+  header: {
+    width: "100%",
+    paddingTop: STATUS_BAR_HEIGHT,
+    paddingHorizontal: 20,
+    paddingBottom: 12,
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    backgroundColor: "#000",
+  },
+  side: {
+    width: 32,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  center: {
+    flexDirection: "row",
+    alignItems: "center",
+  },
+  logo: {
+    width: 42,
+    height: 42,
+    marginRight: 8,
+  },
+  title: {
+    color: "#fff",
+    fontSize: 22,
+    fontWeight: "700",
+  },
+});

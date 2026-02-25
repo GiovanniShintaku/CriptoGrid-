@@ -1,0 +1,43 @@
+@import './global.css';
+
+
+.btn {
+    background: rgba(255, 255, 255, 0.08);
+    border: none;
+    cursor: pointer;
+    padding: 16px;
+    align-items: center;
+    gap: 6px;
+    color: var(--text);
+    font-family: var(--font-hx);
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+.dropDown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropDownContent {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdownContent button {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropDown:hover .dropdownContent {
+    display: block;
+    border: var(--accent) 1px solid;
+    
+}
